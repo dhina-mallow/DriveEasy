@@ -41,6 +41,9 @@ private class DriveEasySecurityTest {
             Username = alias + '.' + unique + '@driveeasy.test', ProfileId = p.Id,
             EmailEncodingKey = 'UTF-8', LanguageLocaleKey = 'en_US', LocaleSidKey = 'en_IN',
             TimeZoneSidKey = 'Asia/Kolkata');
+        if (permissionSetNames.contains('DriveEasy_Manager_Addon')) {
+            u.UserRoleId = [SELECT Id FROM UserRole WHERE DeveloperName = 'Branch_Manager' LIMIT 1].Id;
+        }
         insert u;
         List<PermissionSetAssignment> assignments = new List<PermissionSetAssignment>();
         for (PermissionSet ps : [SELECT Id FROM PermissionSet WHERE Name IN :permissionSetNames]) {
@@ -120,14 +123,11 @@ private class DriveEasySecurityTest {
         System.runAs(user('secmgr')) {
             Assert.isTrue(Schema.sObjectType.Car__c.isCreateable(), 'Manager must create cars');
             Assert.isTrue(Schema.sObjectType.Car__c.isUpdateable(), 'Manager must edit cars');
-            Car__c newCar = new Car__c(Name = 'TN37SEC998', Make__c = 'Tata', Model__c = 'Tiago',
-                Category__c = 'Hatchback', Daily_Rate__c = 1800, Free_KM_Per_Day__c = 250,
-                Extra_KM_Rate__c = 10, Current_Odometer__c = 100, Status__c = 'Available');
-            insert as user newCar;
-            newCar.Daily_Rate__c = 1900;
-            update as user newCar;
+            Car__c adminOwnedCar = [SELECT Id, Daily_Rate__c FROM Car__c WHERE Id = :carId()];
+            adminOwnedCar.Daily_Rate__c = 1900;
+            update as user adminOwnedCar;
         }
-        Assert.areEqual(1900, [SELECT Daily_Rate__c FROM Car__c WHERE Name = 'TN37SEC998'].Daily_Rate__c);
+        Assert.areEqual(1900, [SELECT Daily_Rate__c FROM Car__c WHERE Name = :CAR_REG].Daily_Rate__c);
     }
 
     // "Cancel bookings: manager only" is a custom permission; "View reports and dashboard: manager only"

@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata"/>
-
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Share_Cars_With_Branch_Manager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cars With Branch Manager</label>
+        <sharedTo>
+            <role>Branch_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

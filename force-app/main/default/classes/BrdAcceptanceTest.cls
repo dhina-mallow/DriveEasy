@@ -85,6 +85,9 @@ private class BrdAcceptanceTest {
             Username = alias + '.' + unique + '@driveeasy.test', ProfileId = p.Id,
             EmailEncodingKey = 'UTF-8', LanguageLocaleKey = 'en_US', LocaleSidKey = 'en_IN',
             TimeZoneSidKey = 'Asia/Kolkata');
+        if (permissionSetNames.contains('DriveEasy_Manager_Addon')) {
+            u.UserRoleId = [SELECT Id FROM UserRole WHERE DeveloperName = 'Branch_Manager' LIMIT 1].Id;
+        }
         insert u;
         List<PermissionSetAssignment> assignments = new List<PermissionSetAssignment>();
         for (PermissionSet ps : [SELECT Id FROM PermissionSet WHERE Name IN :permissionSetNames]) {
@@ -265,8 +268,9 @@ private class BrdAcceptanceTest {
         }
         System.runAs(manager) {
             Assert.isTrue(Schema.sObjectType.Car__c.isUpdateable(), 'Branch Manager must be able to edit cars');
-            Car__c managerChange = new Car__c(Id = car, Daily_Rate__c = 2000);
-            update as user managerChange;
+            Car__c adminCar = [SELECT Id, Daily_Rate__c FROM Car__c WHERE Id = :car];
+            adminCar.Daily_Rate__c = 2000;
+            update as user adminCar;
         }
         assertMoney(2000, [SELECT Daily_Rate__c FROM Car__c WHERE Id = :car].Daily_Rate__c, 'New daily rate');
     }

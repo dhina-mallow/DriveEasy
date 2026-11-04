@@ -125,7 +125,7 @@ Apply these manual Salesforce settings because they are not part of the metadata
    - Contact: Public Read/Write
    - External access: Private for Car, Booking, and Contact
 5. Share the DriveEasy report and dashboard folders with the Branch Manager role.
-6. Activate the booking, pickup, cancellation, and confirmation Flows after reviewing their entry conditions.
+6. Activate the Booking Car Status Sync, Record Pickup, and Cancel Booking Flows after reviewing their entry conditions. Do not activate Booking Confirmation Email; confirmation emails are sent by `BookingNotificationQueueable`.
 7. Assign the DriveEasy Desk Agent permission set and, for managers, the Manager Addon permission set.
 
 ### Load demo data
@@ -181,7 +181,7 @@ Booking confirmation is optional and depends on Salesforce email delivery:
 
 - Enable Deliverability under **Setup > Email Administration > Deliverability**.
 - Verify that the sender address can receive email in the test org.
-- Confirm that the booking confirmation flow is active.
+- Do not activate the obsolete `Booking Confirmation Email` flow. Confirmation emails are sent once by the `BookingNotificationQueueable` Apex class invoked when a booking is created.
 - Set `Skip_Confirmation_Email__c` only when a demo import should suppress confirmation email.
 
 ## Screenshots
