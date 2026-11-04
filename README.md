@@ -199,8 +199,8 @@ Create test-only credentials rather than publishing a real account password:
 
 | Role | URL | Username | Password |
 | --- | --- | --- | --- |
-| Rental Desk Agent (Ravi) | https://login.salesforce.com | `ravi.agent.<your-name>@driveeasy.demo` | Set and manage only the demo password securely |
-| Branch Manager (Sunita) | https://login.salesforce.com | `sunita.manager.<your-name>@driveeasy.demo` | Set and manage only the demo password securely |
+| Rental Desk Agent (Ravi) | https://orgfarm-d92a4ed1f5-dev-ed.develop.my.salesforce.com | raviagentdhinakaranvnr2020@gmail.com | Salesforce@6374 |
+| Branch Manager (Sunita) | https://orgfarm-d92a4ed1f5-dev-ed.develop.my.salesforce.com | sunithadhinakaranvnr2020@gmail.com | Salesforce@6374 |
 
 If Salesforce sends reviewer verification codes to an email address controlled for the demo, provide those codes separately to the portfolio reviewer. Do not commit passwords or verification codes to Git.
 
