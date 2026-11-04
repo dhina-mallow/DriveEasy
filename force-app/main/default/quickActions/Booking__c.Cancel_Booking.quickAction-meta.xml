@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>FR-16: lets the Branch Manager cancel a Reserved booking with a reason (runs the Cancel Booking flow).</description>
     <flowDefinition>Cancel_Booking</flowDefinition>
     <label>Cancel Booking</label>
     <optionsCreateFeedItem>false</optionsCreateFeedItem>

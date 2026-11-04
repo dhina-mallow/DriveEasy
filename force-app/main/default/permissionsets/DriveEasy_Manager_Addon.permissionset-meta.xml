@@ -41,6 +41,10 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <tabSettings>
+        <tab>Car__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>DriveEasy_Dashboard</tab>
         <visibility>Visible</visibility>
     </tabSettings>

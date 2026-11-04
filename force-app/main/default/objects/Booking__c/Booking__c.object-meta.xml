@@ -149,7 +149,7 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>Booking_Primary_Layout</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Tracks a customer's car reservation from pickup through cancellation or return, including charges and calculated billing details.</description>
+    <description>Tracks a customer&apos;s car reservation from pickup through cancellation or return, including charges and calculated billing details.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>

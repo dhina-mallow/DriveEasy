@@ -2,12 +2,16 @@
 <ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
     <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
     <language>en_US</language>
-    <masterLabel>DriveEasy Logo</masterLabel>
-    <relationships/>
+    <masterLabel>car_rental</masterLabel>
+    <relationships>
+        <organization>
+            <access>VIEWER</access>
+        </organization>
+    </relationships>
     <versions>
         <version>
             <number>1</number>
-            <pathOnClient>car_rental.asset</pathOnClient>
+            <pathOnClient>car_rental.jpg</pathOnClient>
         </version>
     </versions>
 </ContentAsset>
