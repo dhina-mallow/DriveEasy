@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Birth__c</fullName>
+    <description>Customer date of birth used to verify the minimum driver age at booking.</description>
+    <label>Date of Birth</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

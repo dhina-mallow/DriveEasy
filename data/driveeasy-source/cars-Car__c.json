@@ -1,0 +1,154 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Car__c",
+                "referenceId": "Car__cRef1"
+            },
+            "Name": "TN37AB1001",
+            "Make__c": "Maruti",
+            "Model__c": "Swift",
+            "Category__c": "Hatchback",
+            "Status__c": "On_Rent",
+            "Daily_Rate__c": 1800,
+            "Free_KM_Per_Day__c": 250,
+            "Extra_KM_Rate__c": 10,
+            "Current_Odometer__c": 10400
+        },
+        {
+            "attributes": {
+                "type": "Car__c",
+                "referenceId": "Car__cRef2"
+            },
+            "Name": "TN37AB1002",
+            "Make__c": "Hyundai",
+            "Model__c": "i20",
+            "Category__c": "Hatchback",
+            "Status__c": "Available",
+            "Daily_Rate__c": 1800,
+            "Free_KM_Per_Day__c": 250,
+            "Extra_KM_Rate__c": 10,
+            "Current_Odometer__c": 11500
+        },
+        {
+            "attributes": {
+                "type": "Car__c",
+                "referenceId": "Car__cRef3"
+            },
+            "Name": "TN37AB1003",
+            "Make__c": "Tata",
+            "Model__c": "Tiago",
+            "Category__c": "Hatchback",
+            "Status__c": "On_Rent",
+            "Daily_Rate__c": 1800,
+            "Free_KM_Per_Day__c": 250,
+            "Extra_KM_Rate__c": 10,
+            "Current_Odometer__c": 11520
+        },
+        {
+            "attributes": {
+                "type": "Car__c",
+                "referenceId": "Car__cRef4"
+            },
+            "Name": "TN37AB1004",
+            "Make__c": "Maruti",
+            "Model__c": "Baleno",
+            "Category__c": "Hatchback",
+            "Status__c": "Available",
+            "Daily_Rate__c": 1800,
+            "Free_KM_Per_Day__c": 250,
+            "Extra_KM_Rate__c": 10,
+            "Current_Odometer__c": 11800
+        },
+        {
+            "attributes": {
+                "type": "Car__c",
+                "referenceId": "Car__cRef5"
+            },
+            "Name": "TN37AB2001",
+            "Make__c": "Honda",
+            "Model__c": "City",
+            "Category__c": "Sedan",
+            "Status__c": "Available",
+            "Daily_Rate__c": 2500,
+            "Free_KM_Per_Day__c": 250,
+            "Extra_KM_Rate__c": 12,
+            "Current_Odometer__c": 12650
+        },
+        {
+            "attributes": {
+                "type": "Car__c",
+                "referenceId": "Car__cRef6"
+            },
+            "Name": "TN37AB2002",
+            "Make__c": "Hyundai",
+            "Model__c": "Verna",
+            "Category__c": "Sedan",
+            "Status__c": "Available",
+            "Daily_Rate__c": 2500,
+            "Free_KM_Per_Day__c": 250,
+            "Extra_KM_Rate__c": 12,
+            "Current_Odometer__c": 12500
+        },
+        {
+            "attributes": {
+                "type": "Car__c",
+                "referenceId": "Car__cRef7"
+            },
+            "Name": "TN37AB2003",
+            "Make__c": "Maruti",
+            "Model__c": "Ciaz",
+            "Category__c": "Sedan",
+            "Status__c": "Available",
+            "Daily_Rate__c": 2500,
+            "Free_KM_Per_Day__c": 250,
+            "Extra_KM_Rate__c": 12,
+            "Current_Odometer__c": 13000
+        },
+        {
+            "attributes": {
+                "type": "Car__c",
+                "referenceId": "Car__cRef8"
+            },
+            "Name": "TN37AB3001",
+            "Make__c": "Hyundai",
+            "Model__c": "Creta",
+            "Category__c": "SUV",
+            "Status__c": "Available",
+            "Daily_Rate__c": 3500,
+            "Free_KM_Per_Day__c": 300,
+            "Extra_KM_Rate__c": 15,
+            "Current_Odometer__c": 13700
+        },
+        {
+            "attributes": {
+                "type": "Car__c",
+                "referenceId": "Car__cRef9"
+            },
+            "Name": "TN37AB3002",
+            "Make__c": "Mahindra",
+            "Model__c": "XUV700",
+            "Category__c": "SUV",
+            "Status__c": "Available",
+            "Daily_Rate__c": 3500,
+            "Free_KM_Per_Day__c": 300,
+            "Extra_KM_Rate__c": 15,
+            "Current_Odometer__c": 14000
+        },
+        {
+            "attributes": {
+                "type": "Car__c",
+                "referenceId": "Car__cRef10"
+            },
+            "Name": "TN37AB3003",
+            "Make__c": "Tata",
+            "Model__c": "Harrier",
+            "Category__c": "SUV",
+            "Status__c": "Under_Maintenance",
+            "Daily_Rate__c": 3500,
+            "Free_KM_Per_Day__c": 300,
+            "Extra_KM_Rate__c": 15,
+            "Current_Odometer__c": 14500
+        }
+    ]
+}

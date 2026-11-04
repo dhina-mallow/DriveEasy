@@ -1,0 +1,367 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef1"
+            },
+            "Name": "BK-0015",
+            "Car__c": "Car__cRef1",
+            "Customer__c": "ContactRef1",
+            "Pickup_Date_Time__c": "2026-11-01T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-02T04:30:00.000+0000",
+            "Status__c": "Returned",
+            "Pickup_Odometer__c": 10000,
+            "Actual_Return_Time__c": "2026-11-02T04:30:00.000+0000",
+            "Return_Odometer__c": 10400,
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef2"
+            },
+            "Name": "BK-0016",
+            "Car__c": "Car__cRef2",
+            "Customer__c": "ContactRef2",
+            "Pickup_Date_Time__c": "2026-11-01T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-02T04:30:00.000+0000",
+            "Status__c": "Returned",
+            "Pickup_Odometer__c": 10500,
+            "Actual_Return_Time__c": "2026-11-02T07:30:00.000+0000",
+            "Return_Odometer__c": 11400,
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef3"
+            },
+            "Name": "BK-0017",
+            "Car__c": "Car__cRef3",
+            "Customer__c": "ContactRef3",
+            "Pickup_Date_Time__c": "2026-11-01T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-02T04:30:00.000+0000",
+            "Status__c": "Returned",
+            "Pickup_Odometer__c": 11000,
+            "Actual_Return_Time__c": "2026-11-02T04:30:00.000+0000",
+            "Return_Odometer__c": 11520,
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef4"
+            },
+            "Name": "BK-0018",
+            "Car__c": "Car__cRef4",
+            "Customer__c": "ContactRef6",
+            "Pickup_Date_Time__c": "2026-11-02T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-03T04:30:00.000+0000",
+            "Status__c": "Returned",
+            "Pickup_Odometer__c": 11500,
+            "Actual_Return_Time__c": "2026-11-03T06:30:00.000+0000",
+            "Return_Odometer__c": 11800,
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef5"
+            },
+            "Name": "BK-0019",
+            "Car__c": "Car__cRef5",
+            "Customer__c": "ContactRef7",
+            "Pickup_Date_Time__c": "2026-11-01T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-02T04:30:00.000+0000",
+            "Status__c": "Returned",
+            "Pickup_Odometer__c": 12000,
+            "Actual_Return_Time__c": "2026-11-02T04:30:00.000+0000",
+            "Return_Odometer__c": 12650,
+            "Daily_Rate__c": 2500,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 12,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef6"
+            },
+            "Name": "BK-0020",
+            "Car__c": "Car__cRef8",
+            "Customer__c": "ContactRef8",
+            "Pickup_Date_Time__c": "2026-11-02T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-03T04:30:00.000+0000",
+            "Status__c": "Returned",
+            "Pickup_Odometer__c": 13500,
+            "Actual_Return_Time__c": "2026-11-03T04:30:00.000+0000",
+            "Return_Odometer__c": 13700,
+            "Daily_Rate__c": 3500,
+            "Free_Km_Per_Day__c": 300,
+            "Extra_Km_Rate__c": 15,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef7"
+            },
+            "Name": "BK-0021",
+            "Car__c": "Car__cRef2",
+            "Customer__c": "ContactRef9",
+            "Pickup_Date_Time__c": "2026-11-03T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-05T04:30:00.000+0000",
+            "Status__c": "Returned",
+            "Pickup_Odometer__c": 11400,
+            "Actual_Return_Time__c": "2026-11-05T07:00:00.000+0000",
+            "Return_Odometer__c": 11500,
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef8"
+            },
+            "Name": "BK-0022",
+            "Car__c": "Car__cRef3",
+            "Customer__c": "ContactRef10",
+            "Pickup_Date_Time__c": "2026-11-03T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-05T04:30:00.000+0000",
+            "Status__c": "Picked Up",
+            "Pickup_Odometer__c": 11520,
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef9"
+            },
+            "Name": "BK-0023",
+            "Car__c": "Car__cRef1",
+            "Customer__c": "ContactRef11",
+            "Pickup_Date_Time__c": "2026-11-06T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-08T04:30:00.000+0000",
+            "Status__c": "Reserved",
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef10"
+            },
+            "Name": "BK-0024",
+            "Car__c": "Car__cRef4",
+            "Customer__c": "ContactRef12",
+            "Pickup_Date_Time__c": "2026-11-07T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-10T04:30:00.000+0000",
+            "Status__c": "Reserved",
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef11"
+            },
+            "Name": "BK-0025",
+            "Car__c": "Car__cRef5",
+            "Customer__c": "ContactRef13",
+            "Pickup_Date_Time__c": "2026-11-08T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-09T04:30:00.000+0000",
+            "Status__c": "Reserved",
+            "Daily_Rate__c": 2500,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 12,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef12"
+            },
+            "Name": "BK-0026",
+            "Car__c": "Car__cRef6",
+            "Customer__c": "ContactRef14",
+            "Pickup_Date_Time__c": "2026-11-09T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-11T04:30:00.000+0000",
+            "Status__c": "Reserved",
+            "Daily_Rate__c": 2500,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 12,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef13"
+            },
+            "Name": "BK-0027",
+            "Car__c": "Car__cRef7",
+            "Customer__c": "ContactRef15",
+            "Pickup_Date_Time__c": "2026-11-10T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-14T04:30:00.000+0000",
+            "Status__c": "Reserved",
+            "Daily_Rate__c": 2500,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 12,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef14"
+            },
+            "Name": "BK-0028",
+            "Car__c": "Car__cRef8",
+            "Customer__c": "ContactRef1",
+            "Pickup_Date_Time__c": "2026-11-13T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-15T04:30:00.000+0000",
+            "Status__c": "Reserved",
+            "Daily_Rate__c": 3500,
+            "Free_Km_Per_Day__c": 300,
+            "Extra_Km_Rate__c": 15,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef15"
+            },
+            "Name": "BK-0029",
+            "Car__c": "Car__cRef9",
+            "Customer__c": "ContactRef2",
+            "Pickup_Date_Time__c": "2026-11-15T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-18T04:30:00.000+0000",
+            "Status__c": "Reserved",
+            "Daily_Rate__c": 3500,
+            "Free_Km_Per_Day__c": 300,
+            "Extra_Km_Rate__c": 15,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef16"
+            },
+            "Name": "BK-0030",
+            "Car__c": "Car__cRef2",
+            "Customer__c": "ContactRef3",
+            "Pickup_Date_Time__c": "2026-11-09T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-11T04:30:00.000+0000",
+            "Status__c": "Reserved",
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef17"
+            },
+            "Name": "BK-0031",
+            "Car__c": "Car__cRef4",
+            "Customer__c": "ContactRef6",
+            "Pickup_Date_Time__c": "2026-11-18T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-20T04:30:00.000+0000",
+            "Status__c": "Cancelled",
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Cancellation_Reason__c": "plans changed",
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef18"
+            },
+            "Name": "BK-0032",
+            "Car__c": "Car__cRef5",
+            "Customer__c": "ContactRef7",
+            "Pickup_Date_Time__c": "2026-11-19T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-21T04:30:00.000+0000",
+            "Status__c": "Cancelled",
+            "Daily_Rate__c": 2500,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 12,
+            "Cancellation_Reason__c": "found another car",
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef19"
+            },
+            "Name": "BK-0033",
+            "Car__c": "Car__cRef6",
+            "Customer__c": "ContactRef8",
+            "Pickup_Date_Time__c": "2026-11-20T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-21T04:30:00.000+0000",
+            "Status__c": "Cancelled",
+            "Daily_Rate__c": 2500,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 12,
+            "Cancellation_Reason__c": "trip postponed",
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef20"
+            },
+            "Name": "BK-0034",
+            "Car__c": "Car__cRef7",
+            "Customer__c": "ContactRef9",
+            "Pickup_Date_Time__c": "2026-11-23T04:30:00.000+0000",
+            "Return_Date_Time__c": "2026-11-26T04:30:00.000+0000",
+            "Status__c": "Cancelled",
+            "Daily_Rate__c": 2500,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 12,
+            "Cancellation_Reason__c": "customer request",
+            "Skip_Confirmation_Email__c": true
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef21"
+            },
+            "Name": "BK-0035",
+            "Car__c": "Car__cRef1",
+            "Customer__c": "ContactRef9",
+            "Pickup_Date_Time__c": "2026-11-04T13:03:00.000+0000",
+            "Return_Date_Time__c": "2026-11-05T13:03:00.000+0000",
+            "Status__c": "Picked Up",
+            "Pickup_Odometer__c": 10400,
+            "Daily_Rate__c": 1800,
+            "Free_Km_Per_Day__c": 250,
+            "Extra_Km_Rate__c": 10,
+            "Skip_Confirmation_Email__c": false
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+<template>
+    <lightning-card icon-name="standard:product">
+        <h2 slot="title" class="component-title">Find a rental car</h2>
+        <div class="search-page">
+            <section class="search-panel" aria-label="Search available cars">
+                <div class="search-heading">
+                    <div>
+                        <p class="eyebrow">DriveEasy inventory</p>
+                        <h3>Plan your rental</h3>
+                    </div>
+                    <lightning-icon icon-name="utility:travel_and_places" size="medium"></lightning-icon>
+                </div>
+
+                <div class="trip-fields">
+                    <div class="field category-field">
+                        <lightning-combobox label="Category" value={category} options={categoryOptions}
+                            onchange={handleCategory}></lightning-combobox>
+                    </div>
+                    <div class="field">
+                        <lightning-input type="datetime" label="Pickup (IST)" value={pickup}
+                            timezone="Asia/Kolkata" onchange={handlePickup}></lightning-input>
+                    </div>
+                    <div class="field">
+                        <lightning-input type="datetime" label="Return (IST)" value={returnDt}
+                            timezone="Asia/Kolkata" onchange={handleReturn}></lightning-input>
+                    </div>
+                </div>
+
+                <div class="customer-row">
+                    <div class="customer-picker">
+                        <lightning-record-picker label="Customer" object-api-name="Contact"
+                            placeholder="Search customers..." onchange={handleCustomer}></lightning-record-picker>
+                    </div>
+                    <lightning-button class="search-button" label={searchButtonLabel}
+                        variant="brand" icon-name="utility:search" disabled={isSearching}
+                        onclick={handleSearch}></lightning-button>
+                </div>
+            </section>
+
+            <template lwc:if={error}>
+                <div class="message-panel error-panel" role="alert">
+                    <lightning-icon icon-name="utility:error" size="x-small" variant="error"></lightning-icon>
+                    <span>{error}</span>
+                </div>
+            </template>
+
+            <template lwc:if={isSearching}>
+                <div class="loading-panel">
+                    <lightning-spinner alternative-text="Searching available cars" size="small"></lightning-spinner>
+                </div>
+            </template>
+
+            <template lwc:if={noCars}>
+                <div class="message-panel empty-panel">
+                    <lightning-icon icon-name="utility:car" size="small"></lightning-icon>
+                    <div>
+                        <strong>No cars available</strong>
+                        <p>Try another date, time, or category.</p>
+                    </div>
+                </div>
+            </template>
+
+            <template lwc:if={hasCars}>
+                <section class="results-panel">
+                    <div class="results-heading">
+                        <div>
+                            <p class="eyebrow">Available fleet</p>
+                            <h3>{cars.length} cars found</h3>
+                        </div>
+                        <span class="results-note">Prices in INR</span>
+                    </div>
+                    <div class="results-table">
+                        <lightning-datatable key-field="carId" data={cars} columns={columns}
+                            hide-checkbox-column onrowaction={handleRowAction}></lightning-datatable>
+                    </div>
+                </section>
+            </template>
+        </div>
+    </lightning-card>
+</template>

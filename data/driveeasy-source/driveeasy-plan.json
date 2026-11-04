@@ -1,0 +1,20 @@
+[
+    {
+        "sobject": "Car__c",
+        "files": [
+            "cars-Car__c.json"
+        ]
+    },
+    {
+        "sobject": "Contact",
+        "files": [
+            "customers-Contact.json"
+        ]
+    },
+    {
+        "sobject": "Booking__c",
+        "files": [
+            "bookings-Booking__c.json"
+        ]
+    }
+]

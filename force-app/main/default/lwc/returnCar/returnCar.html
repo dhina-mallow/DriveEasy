@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="Return Car" icon-name="standard:return_order">
+        <div class="slds-p-around_medium">
+            <template lwc:if={isPickedUp}>
+                <lightning-input type="datetime" label="Actual return date and time (IST)" value={actualReturn} timezone="Asia/Kolkata" onchange={handleReturnTime}></lightning-input>
+                <lightning-input type="number" label="Return odometer (km)" value={odometer} onchange={handleOdometer}></lightning-input>
+                <p class="slds-text-body_small slds-m-top_x-small">Pickup odometer: {pickupOdometer} km</p>
+                <lightning-button class="slds-m-top_small" label="Calculate bill" onclick={handleCalculate}></lightning-button>
+                
+                <template lwc:if={error}>
+                    <div class="slds-m-top_small slds-text-color_error">{error}</div>
+                </template>
+                
+                <template lwc:if={bill}>
+                    <div class="slds-box slds-m-top_medium">
+                        <div class="slds-grid">
+                            <div class="slds-col">Rent ({bill.rentalDays} day(s))</div>
+                            <div class="slds-col slds-text-align_right"><lightning-formatted-number value={bill.rent} format-style="currency" currency-code="INR"></lightning-formatted-number></div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col">Extra km ({bill.extraKm} km over {bill.freeKm} free)</div>
+                            <div class="slds-col slds-text-align_right"><lightning-formatted-number value={bill.extraKmCharge} format-style="currency" currency-code="INR"></lightning-formatted-number></div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col">Late fee ({bill.lateHours} hour(s) after grace)</div>
+                            <div class="slds-col slds-text-align_right"><lightning-formatted-number value={bill.lateFee} format-style="currency" currency-code="INR"></lightning-formatted-number></div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col">Subtotal</div>
+                            <div class="slds-col slds-text-align_right"><lightning-formatted-number value={bill.subtotal} format-style="currency" currency-code="INR"></lightning-formatted-number></div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col">GST ({bill.gstPercent}%)</div>
+                            <div class="slds-col slds-text-align_right"><lightning-formatted-number value={bill.gst} format-style="currency" currency-code="INR"></lightning-formatted-number></div>
+                        </div>
+                        <div class="slds-grid slds-text-heading_small">
+                            <div class="slds-col"><b>Total</b></div>
+                            <div class="slds-col slds-text-align_right"><b><lightning-formatted-number value={bill.total} format-style="currency" currency-code="INR"></lightning-formatted-number></b></div>
+                        </div>
+                    </div>
+                    <lightning-button class="slds-m-top_small" variant="brand" label="Confirm return" onclick={handleConfirm} disabled={isSaving}></lightning-button>
+                </template>
+            </template>
+            <template lwc:else>
+                <p class="slds-text-color_weak">This booking is not Picked Up, so it cannot be returned.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

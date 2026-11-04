@@ -1,0 +1,21 @@
+Name,Make__c,Model__c,Category__c,Daily_Rate__c,Free_KM_Per_Day__c,Extra_KM_Rate__c,Current_Odometer__c,Status__c
+TN01DE0001,DriveEasy Test,Model 1,Hatchback,1900,250,10,13800,Available
+TN01DE0002,DriveEasy Test,Model 2,Sedan,2000,250,10,15600,Available
+TN01DE0003,DriveEasy Test,Model 3,SUV,2100,250,10,17400,Available
+TN01DE0004,DriveEasy Test,Model 4,Hatchback,2200,250,10,19200,Available
+TN01DE0005,DriveEasy Test,Model 5,Sedan,2300,250,10,21000,Available
+TN01DE0006,DriveEasy Test,Model 6,SUV,2400,250,10,22800,Available
+TN01DE0007,DriveEasy Test,Model 7,Hatchback,2500,250,10,24600,Available
+TN01DE0008,DriveEasy Test,Model 8,Sedan,2600,250,10,26400,Available
+TN01DE0009,DriveEasy Test,Model 9,SUV,2700,250,10,28200,Available
+TN01DE0010,DriveEasy Test,Model 10,Hatchback,2800,250,10,30000,Available
+TN01DE0011,DriveEasy Test,Model 11,Sedan,2900,250,10,31800,Available
+TN01DE0012,DriveEasy Test,Model 12,SUV,3000,250,10,33600,Available
+TN01DE0013,DriveEasy Test,Model 13,Hatchback,3100,250,10,35400,Available
+TN01DE0014,DriveEasy Test,Model 14,Sedan,3200,250,10,37200,Available
+TN01DE0015,DriveEasy Test,Model 15,SUV,3300,250,10,39000,Available
+TN01DE0016,DriveEasy Test,Model 16,Hatchback,3400,250,10,40800,Available
+TN01DE0017,DriveEasy Test,Model 17,Sedan,3500,250,10,42600,Available
+TN01DE0018,DriveEasy Test,Model 18,SUV,3600,250,10,44400,Available
+TN01DE0019,DriveEasy Test,Model 19,Hatchback,3700,250,10,46200,Available
+TN01DE0020,DriveEasy Test,Model 20,Sedan,3800,250,10,48000,Available

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MatchingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <matchingRules>
+        <fullName>Unique_Car_Registration_Match</fullName>
+        <description>This is used to unique field of the car registration number</description>
+        <label>Unique Car Registration Match</label>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>Name</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Active</ruleStatus>
+    </matchingRules>
+</MatchingRules>

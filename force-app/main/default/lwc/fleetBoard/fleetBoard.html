@@ -1,0 +1,147 @@
+<template>
+    <lightning-card title="Fleet Board" icon-name="standard:product_item">
+        <lightning-button-icon slot="actions" icon-name="utility:refresh" alternative-text="Refresh"
+            onclick={handleRefresh}></lightning-button-icon>
+        <div class="fleet-board">
+            <div class="summary-grid">
+                <button type="button" class={tileAll} data-status="All" onclick={handleStatusFilter}>
+                    <span class="tile-icon tile-icon-all"><lightning-icon icon-name="utility:apps" size="small"></lightning-icon></span>
+                    <span><strong class="tile-number">{counts.total}</strong><span class="tile-label">All cars</span></span>
+                </button>
+                <button type="button" class={tileAvailable} data-status="Available" onclick={handleStatusFilter}>
+                    <span class="tile-icon tile-icon-available"><lightning-icon icon-name="utility:check" size="small"></lightning-icon></span>
+                    <span><strong class="tile-number">{counts.available}</strong><span class="tile-label">Available</span></span>
+                </button>
+                <button type="button" class={tileOnRent} data-status="On Rent" onclick={handleStatusFilter}>
+                    <span class="tile-icon tile-icon-rented"><lightning-icon icon-name="utility:clock" size="small"></lightning-icon></span>
+                    <span><strong class="tile-number">{counts.onRent}</strong><span class="tile-label">On rent</span></span>
+                </button>
+                <button type="button" class={tileMaintenance} data-status="Under Maintenance" onclick={handleStatusFilter}>
+                    <span class="tile-icon tile-icon-maintenance"><lightning-icon icon-name="utility:settings" size="small"></lightning-icon></span>
+                    <span><strong class="tile-number">{counts.maintenance}</strong><span class="tile-label">Maintenance</span></span>
+                </button>
+            </div>
+
+            <div class="filter-panel">
+                <div class="filter-category">
+                    <lightning-combobox label="Category" value={category} options={categoryOptions}
+                        onchange={handleCategory}></lightning-combobox>
+                </div>
+                <div class="filter-search">
+                    <lightning-input type="search" label="Search registration, make, model or customer"
+                        onchange={handleSearch}></lightning-input>
+                </div>
+            </div>
+
+            <p class="results-caption">
+                Showing {filteredCount} of {counts.total} cars. Updated
+                <lightning-formatted-date-time value={lastUpdated} hour="2-digit" minute="2-digit"
+                    time-zone="Asia/Kolkata"></lightning-formatted-date-time>
+            </p>
+
+            <template lwc:if={error}>
+                <div class="slds-m-top_small slds-text-color_error">{error}</div>
+            </template>
+            <template lwc:if={noResults}>
+                <div class="slds-m-top_small slds-text-color_weak">No cars match these filters.</div>
+            </template>
+            <template lwc:if={isLoading}>
+                <div class="slds-is-relative slds-m-top_large" style="height: 4rem;">
+                    <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+                </div>
+            </template>
+
+            <div class="car-grid">
+                <template for:each={filteredCards} for:item="c">
+                    <article key={c.key} class={c.cardClass}>
+                            <div class="car-card-header">
+                                <a href="#" data-id={c.carId} onclick={handleOpen} class="registration-link">{c.registrationNumber}</a>
+                                <span class={c.badgeClass}>{c.status}</span>
+                            </div>
+                            <div class="car-identity">
+                                <strong>{c.subtitle}</strong>
+                                <span>{c.category}</span>
+                            </div>
+                            <p class="car-specs">
+                                <lightning-formatted-number value={c.odometer}></lightning-formatted-number> km
+                                | <lightning-formatted-number value={c.dailyRate} format-style="currency"
+                                    currency-code="INR"></lightning-formatted-number> per day
+                            </p>
+                            <div class="card-divider"></div>
+
+                            <template lwc:if={c.isOnRent}>
+                                <template lwc:if={c.hasCurrent}>
+                                    <div class="booking-summary">
+                                        <span class="detail-label">Current booking</span>
+                                        <strong>{c.currentCustomer}</strong>
+                                        <span>{c.currentBooking}</span>
+                                    </div>
+                                    <dl class="date-list">
+                                        <div>
+                                            <dt>Out since</dt>
+                                            <dd><lightning-formatted-date-time value={c.currentPickup} year="numeric" month="short"
+                                                day="2-digit" hour="2-digit" minute="2-digit" time-zone="Asia/Kolkata">
+                                            </lightning-formatted-date-time></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Due back</dt>
+                                            <dd><lightning-formatted-date-time value={c.currentReturn} year="numeric" month="short"
+                                                day="2-digit" hour="2-digit" minute="2-digit" time-zone="Asia/Kolkata">
+                                            </lightning-formatted-date-time></dd>
+                                        </div>
+                                    </dl>
+                                    <template lwc:if={c.overdue}>
+                                        <p class="slds-text-color_error"><b>{c.overdueText}</b></p>
+                                    </template>
+                                    <p class="available-time"><b>Available from : </b>
+                                        <lightning-formatted-date-time value={c.availableFrom} year="numeric" month="short"
+                                            day="2-digit" hour="2-digit" minute="2-digit" time-zone="Asia/Kolkata">
+                                        </lightning-formatted-date-time>
+                                        <span class="slds-text-color_weak"> (after the turnaround buffer)</span></p>
+                                </template>
+                                <template lwc:else>
+                                    <p class="slds-text-color_weak">On rent, but no active booking was found.</p>
+                                </template>
+                            </template>
+                            <template lwc:elseif={c.isAvailable}>
+                                <p class="status-message status-available">Available now</p>
+                                <template lwc:if={c.noNext}>
+                                    <p class="empty-message">No upcoming bookings.</p>
+                                </template>
+                            </template>
+                            <template lwc:elseif={c.isMaintenance}>
+                                <p class="status-message status-maintenance">In the workshop</p>
+                                <p class="empty-message">The manager marks it Available after the repair.</p>
+                                <template lwc:if={c.warnUpcoming}>
+                                    <p class="warning-message">{c.upcomingCount} upcoming booking(s) need another car.</p>
+                                </template>
+                            </template>
+
+                            <template lwc:if={c.hasNext}>
+                                <div class="next-booking">
+                                    <p><span class="detail-label">Next booking</span><strong>{c.nextBooking}</strong> by {c.nextCustomer}</p>
+                                    <dl class="date-list next-date-list">
+                                        <div>
+                                            <dt>Pickup</dt>
+                                            <dd><lightning-formatted-date-time value={c.nextPickup} year="numeric" month="short"
+                                                day="2-digit" hour="2-digit" minute="2-digit" time-zone="Asia/Kolkata">
+                                            </lightning-formatted-date-time></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Return</dt>
+                                            <dd><lightning-formatted-date-time value={c.nextReturn} year="numeric" month="short"
+                                                day="2-digit" hour="2-digit" minute="2-digit" time-zone="Asia/Kolkata">
+                                            </lightning-formatted-date-time></dd>
+                                        </div>
+                                    </dl>
+                                    <template lwc:if={c.moreUpcoming}>
+                                        <p class="slds-text-body_small slds-text-color_weak">and {c.moreCount} more after that</p>
+                                    </template>
+                                </div>
+                            </template>
+                    </article>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

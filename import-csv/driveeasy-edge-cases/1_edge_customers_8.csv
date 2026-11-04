@@ -1,0 +1,9 @@
+LastName,FirstName,Email,Phone,Date_of_Birth__c,Licence_Number__c,Licence_Expiry_Date__c
+Underage,Valid,edge.underage@example.com,9876543210,2012-05-10,TNEDGE-UNDERAGE,2036-12-31
+FutureDOB,Valid,edge.future@example.com,9876543211,2030-01-01,TNEDGE-FUTUREDOB,2036-12-31
+InvalidPhone,Valid,edge.phone@example.com,12345,1990-01-01,TNEDGE-BADPHONE,2036-12-31
+DuplicateLicenceA,Valid,edge.licence.a@example.com,9876543212,1990-01-01,TNEDGE-DUPLICENCE,2036-12-31
+DuplicateLicenceB,Valid,edge.licence.b@example.com,9876543213,1990-01-01,TNEDGE-DUPLICENCE,2036-12-31
+ExpiredLicence,Valid,edge.expired@example.com,9876543214,1990-01-01,TNEDGE-EXPIRED,2025-12-31
+DuplicateEmailA,Valid,edge.duplicate@example.com,9876543215,1990-01-01,TNEDGE-DUPEMAIL-A,2036-12-31
+DuplicateEmailB,Valid,edge.duplicate@example.com,9876543216,1990-01-01,TNEDGE-DUPEMAIL-B,2036-12-31

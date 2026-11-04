@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>DriveEasy Setting</label>
+    <description>Stores configurable DriveEasy business rules such as branch hours, lead time, rental limits, GST, buffer, grace, age, and late-fee values.</description>
+    <pluralLabel>DriveEasy Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

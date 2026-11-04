@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skip_Confirmation_Email__c</fullName>
+    <description>Controls whether the booking confirmation email should be skipped.</description>
+    <defaultValue>false</defaultValue>
+    <label>Skip Confirmation Email</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
